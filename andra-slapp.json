@@ -1,0 +1,23 @@
+{
+ "sellers": {
+  "Caviste": {
+   "url": "https://www.caviste.se/cav/",
+   "about": "Fransk importör som säljer färdiga lådor från mindre odlare direkt till privatpersoner i Sverige, med hemleverans. Säljs inte via Systembolaget.",
+   "terms": "Betalas vid beställning med Swish eller kort. Leverans med Budbee eller Bring, legitimation krävs och åldersgränsen är 20 år."
+  }
+ },
+ "drops": [
+  {
+   "id": "cav0217",
+   "seller": "Caviste",
+   "name": "CAV0217",
+   "launch": "2026-10-15T14:00",
+   "url": "https://www.caviste.se/cav/",
+   "intro": "Nästa låda från Caviste. Odlare och viner presenteras först när lådan släpps.",
+   "boxPrice": null,
+   "bottles": null,
+   "soldOut": false,
+   "wines": []
+  }
+ ]
+}

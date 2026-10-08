@@ -134,6 +134,37 @@ h1.date{font-family:var(--display);font-style:italic;font-weight:400;color:var(-
 .empty h2{font-family:var(--display);font-weight:500;margin:0 0 8px}
 
 .note{font-size:.85rem;color:var(--muted);margin-top:48px}
+
+/* andra släpp */
+.elsewhere{margin-top:56px}
+.elsewhere .sechead{margin-top:0}
+.drops{display:grid;gap:16px}
+.drop{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:24px;align-items:center;background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:22px 26px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.drop::before{content:"";position:absolute;inset:0 auto 0 0;width:6px;background:repeating-linear-gradient(180deg,var(--claret) 0 14px,var(--straw-band) 14px 28px,var(--moss) 28px 42px)}
+.cal{width:86px;text-align:center;border:1.5px solid var(--rule);border-radius:12px;padding:8px 6px 10px;background:var(--bg)}
+.cal .wd{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.cal .dd{font-family:var(--display);font-size:2.3rem;line-height:1;margin:2px 0}
+.cal .mm{font-size:.82rem;color:var(--ink)}
+.cal .tt{font-size:.78rem;color:var(--claret);font-weight:600;margin-top:4px}
+.drop .seller{font-size:.82rem;font-weight:600;color:var(--claret);margin:0;letter-spacing:.02em}
+.drop h3{font-family:var(--display);font-weight:500;font-size:1.55rem;line-height:1.15;margin:4px 0 6px}
+.drop .intro{margin:0;font-size:.93rem}
+.drop .meta{margin:8px 0 0;font-size:.84rem;color:var(--muted)}
+.drop .status{display:inline-block;margin-top:10px;font-size:.78rem;font-weight:600;padding:5px 9px;border-radius:999px;background:var(--claret-tint);color:var(--claret)}
+.drop .status.live{background:var(--moss);color:#fff}
+.drop .status.out{background:#F0F0EB;color:var(--muted)}
+.drop .go{white-space:nowrap;text-decoration:none;border:1.5px solid var(--ink);border-radius:999px;padding:9px 16px;font-size:.88rem;font-weight:600;transition:background .15s ease,color .15s ease}
+.drop .go:hover{background:var(--ink);color:#fff}
+.drop .dwines{grid-column:2/-1;list-style:none;margin:4px 0 0;padding:12px 0 0;border-top:1px solid var(--rule);display:grid;gap:6px}
+.drop .dwines li{display:flex;justify-content:space-between;gap:12px;font-size:.9rem}
+.drop .dwines .r{color:var(--muted);font-size:.82rem}
+.elsewhere .fine{font-size:.82rem;color:var(--muted);margin:10px 0 0;max-width:72ch}
+@media (max-width:720px){
+  .drop{grid-template-columns:auto minmax(0,1fr);gap:16px;padding:20px 18px 20px 24px}
+  .drop .go{grid-column:1/-1;justify-self:start}
+  .drop .dwines{grid-column:1/-1}
+  .cal{width:72px}.cal .dd{font-size:1.9rem}
+}
 .sitefoot{margin-top:28px;padding-top:20px;border-top:1px solid var(--rule);font-size:.85rem;color:var(--muted);line-height:1.6}
 .sitefoot p{margin:0 0 8px;max-width:72ch}
 .sitefoot strong{color:var(--ink);font-weight:600}
@@ -175,11 +206,12 @@ h1.date{font-family:var(--display);font-style:italic;font-weight:400;color:var(-
 
   <section class="specials" id="special" hidden></section>
   <div id="content"></div>
+  <section class="elsewhere" id="elsewhere" hidden></section>
 
   <p class="note" id="footnote"></p>
   <footer class="sitefoot">
     <p class="brand">Winewine</p>
-    <p><strong>Winewine är en privat, ideell hobbysida utan koppling till Systembolaget.</strong> Beställning, köp och utlämning sker hos Systembolaget, som inte står bakom något innehåll här.</p>
+    <p><strong>Winewine är en privat, ideell hobbysida utan koppling till Systembolaget eller till någon importör.</strong> För viner ur Systembolagets sortiment sker beställning, köp och utlämning hos Systembolaget, som inte står bakom något innehåll här. Släpp under "Utanför Systembolaget" säljs av respektive säljare enligt deras egna villkor.</p>
     <p>Sidan riktar sig till vuxna. Ålder för att handla på Systembolaget är 20 år. Läs mer om <a href="https://www.systembolaget.se/omtanke/" target="_blank" rel="noopener">alkohol och hälsa</a>.</p>
     <p>Vinbeskrivningarna är skrivna med egna ord. Sidan har inga annonser och inga affiliatelänkar.</p>
   </footer>
@@ -303,6 +335,7 @@ function renderRelease(){
       <p>Den fullständiga vinlistan med provningsnoteringar publiceras ungefär en vecka före släppet. Då byggs lådorna för ${esc(dateLabel(curDate))}.</p>
       ${hl?`<p>Det här vet vi redan finns med:</p><ul>${hl}</ul>`:""}</section>`;
   }
+  renderDrops();
   $("footnote").textContent=(r.source?`Betyg och provningsnoteringar från ${r.source}. `:"")+"Kontrollera pris och artikelnummer på Systembolaget innan du beställer.";
 }
 
@@ -332,6 +365,41 @@ function refresh(){
   $("archive").value=pick; renderMonth(pick,true);
 }
 $("archive").addEventListener("change",e=>renderMonth(e.target.value,false));
+
+/* andra släpp utanför Systembolaget */
+let extra={sellers:{},drops:[]};
+const WD=["sön","mån","tis","ons","tors","fre","lör"];
+function isoWeek(d){const t=new Date(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate()));const n=t.getUTCDay()||7;t.setUTCDate(t.getUTCDate()+4-n);const y=new Date(Date.UTC(t.getUTCFullYear(),0,1));return t.getUTCFullYear()+"-"+Math.ceil(((t-y)/864e5+1)/7)}
+function dropHTML(x){
+  const at=new Date(x.launch), now=new Date(), s=sellerOf(x);
+  const hhmm=at.toLocaleTimeString("sv-SE",{hour:"2-digit",minute:"2-digit"});
+  const days=Math.ceil((new Date(at.toDateString())-new Date(now.toDateString()))/864e5);
+  let st;
+  if(x.soldOut) st=`<span class="status out">Slutsålt</span>`;
+  else if(at>now) st=`<span class="status">${days===0?"Släpps i dag kl "+hhmm:days===1?"Släpps i morgon kl "+hhmm:"Släpps om "+days+" dagar"}</span>`;
+  else st=`<span class="status live">Släppt ${at.getDate()} ${MONTHS[at.getMonth()]}, kan vara slutsålt</span>`;
+  const wines=(x.wines||[]).length?`<ul class="dwines">${x.wines.map(w=>`<li><span>${esc(w.name)}${w.region?` <span class="r">${esc(w.region)}</span>`:""}</span><span>${w.qty?w.qty+" × ":""}${w.price?kr(w.price):""}</span></li>`).join("")}</ul>`:"";
+  const meta=[x.producer,x.region,x.bottles?x.bottles+" flaskor":"",x.boxPrice?kr(x.boxPrice)+" för lådan":""].filter(Boolean).join(" · ");
+  return `<article class="drop">
+    <div class="cal" aria-hidden="true"><div class="wd">${WD[at.getDay()]}</div><div class="dd">${at.getDate()}</div><div class="mm">${MONTHS[at.getMonth()]}</div><div class="tt">${hhmm}</div></div>
+    <div><p class="seller">${esc(x.seller)}</p><h3>${esc(x.name)}</h3><p class="intro">${esc(x.intro||"")}</p>${meta?`<p class="meta">${esc(meta)}</p>`:""}${st}</div>
+    <a class="go" href="${esc(x.url||s.url||"#")}" target="_blank" rel="noopener">Till ${esc(x.seller)}</a>
+    ${wines}
+  </article>`;
+}
+function sellerOf(x){return (extra.sellers||{})[x.seller]||{}}
+function renderDrops(){
+  const box=$("elsewhere"); if(!curDate){box.hidden=true;return}
+  const wk=isoWeek(new Date(curDate+"T12:00:00")), now=new Date();
+  const list=(extra.drops||[]).filter(x=>{const at=new Date(x.launch);return isoWeek(at)===wk||(at>now&&!x.soldOut)}).sort((a,b)=>a.launch<b.launch?-1:1);
+  if(!list.length){box.hidden=true;box.innerHTML="";return}
+  const sellers=[...new Set(list.map(x=>x.seller))].map(n=>({n,...(extra.sellers||{})[n]})).filter(s=>s.about);
+  box.innerHTML=`<div class="sechead"><h2>Utanför Systembolaget</h2><p>Släpp från importörer som säljer direkt</p></div>
+    <div class="drops">${list.map(dropHTML).join("")}</div>
+    ${sellers.map(s=>`<p class="fine"><strong>${esc(s.n)}:</strong> ${esc(s.about)} ${esc(s.terms||"")}</p>`).join("")}`;
+  box.hidden=false;
+}
+fetch("andra-slapp.json",{cache:"no-cache"}).then(r=>r.ok?r.json():null).then(d=>{if(d){extra=d;if(curDate)renderDrops()}}).catch(()=>{});
 
 fetch("releases.json",{cache:"no-cache"})
   .then(r=>{if(!r.ok)throw new Error(r.status);return r.json()})
