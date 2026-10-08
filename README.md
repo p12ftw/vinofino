@@ -22,4 +22,8 @@ Lägg till eller ändra en post i `releases.json`. Ett färdigt släpp har `boxe
 ett kommande släpp utan lådor har bara `highlights` och visas som "Kommer snart".
 Sätt `monthBest: true` på högst ett släpp per månad.
 
+`wines` är hela släppet, ett objekt per vin: `artnr`, `producer`, `name`, `cat`
+(Rött/Vitt/Rosé/Mousserande/Sött/Starkvin), `country`, `region`, `price`, `score`, `value`,
+`bottles` och vid behov `cl`. Vilka viner som ligger i en låda räknas ut från artikelnumren.
+
 Sidan läser `releases.json` vid varje besök, så en push räcker för att uppdatera.

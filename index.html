@@ -135,6 +135,41 @@ h1.date{font-family:var(--display);font-style:italic;font-weight:400;color:var(-
 
 .note{font-size:.85rem;color:var(--muted);margin-top:48px}
 
+/* hela släppet */
+.allw{margin-top:64px}
+.filters{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:12px 0;margin:0 0 6px;border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button{background:var(--surface);border:1.5px solid var(--rule);border-radius:999px;padding:6px 12px;font-size:.84rem;cursor:pointer;line-height:1.2}
+.seg button .n{color:var(--muted);margin-left:4px;font-variant-numeric:tabular-nums}
+.seg button:hover{border-color:var(--ink)}
+.seg button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.seg button[aria-pressed="true"] .n{color:#fff;opacity:.7}
+.sortw{margin-left:auto;font-size:.84rem;color:var(--muted);display:flex;gap:8px;align-items:center}
+.sortw select{background:var(--surface);border:1.5px solid var(--rule);border-radius:8px;padding:5px 8px;font-size:.84rem}
+.wgroup h3{font-family:var(--display);font-weight:500;font-size:1.35rem;margin:26px 0 4px;display:flex;align-items:baseline;gap:10px}
+.wgroup h3 .n{font-family:var(--body);font-size:.85rem;color:var(--muted)}
+.wgroup h3 .dot{width:10px;height:10px;vertical-align:2px}
+.dot.mouss{background:#C9B98A}.dot.rose{background:#E39AA8}.dot.ovr{background:#8A6A3A}
+.wl{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.wr{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 20px;padding:12px 4px;border-bottom:1px solid var(--rule)}
+.wr.picked{background:linear-gradient(90deg,var(--moss-tint),transparent 70%);box-shadow:inset 3px 0 0 var(--moss);padding-left:14px}
+.wr .nm{font-weight:600;line-height:1.3}
+.wr .nm .pr{font-weight:500;color:var(--muted)}
+.wr .rg{font-size:.84rem;color:var(--muted);margin-top:2px}
+.wr .rg a{color:var(--muted);text-underline-offset:2px}
+.wr .rg a:hover{color:var(--ink)}
+.wr .rt{text-align:right;white-space:nowrap}
+.wr .rt .pc{font-family:var(--display);font-size:1.15rem;font-variant-numeric:tabular-nums}
+.wr .tags{grid-column:1/-1;margin-top:2px}
+.tag.inbox{background:var(--moss-tint);color:var(--moss);border:1px solid #CFE0CF;font-weight:600}
+.tag.meh{background:transparent;color:var(--muted);border:1px solid var(--rule)}
+.wempty{padding:24px 4px;color:var(--muted)}
+@media (max-width:640px){
+  .sortw{margin-left:0}
+  .filters{gap:8px}
+  .seg button{padding:5px 10px}
+}
+
 /* andra släpp */
 .elsewhere{margin-top:56px}
 .elsewhere .sechead{margin-top:0}
@@ -206,6 +241,7 @@ h1.date{font-family:var(--display);font-style:italic;font-weight:400;color:var(-
 
   <section class="specials" id="special" hidden></section>
   <div id="content"></div>
+  <section class="allw" id="allwines" hidden></section>
   <section class="elsewhere" id="elsewhere" hidden></section>
 
   <p class="note" id="footnote"></p>
@@ -335,6 +371,7 @@ function renderRelease(){
       <p>Den fullständiga vinlistan med provningsnoteringar publiceras ungefär en vecka före släppet. Då byggs lådorna för ${esc(dateLabel(curDate))}.</p>
       ${hl?`<p>Det här vet vi redan finns med:</p><ul>${hl}</ul>`:""}</section>`;
   }
+  renderAll();
   renderDrops();
   $("footnote").textContent=(r.source?`Betyg och provningsnoteringar från ${r.source}. `:"")+"Kontrollera pris och artikelnummer på Systembolaget innan du beställer.";
 }
@@ -365,6 +402,69 @@ function refresh(){
   $("archive").value=pick; renderMonth(pick,true);
 }
 $("archive").addEventListener("change",e=>renderMonth(e.target.value,false));
+
+/* hela släppet */
+const CATS=[["rott","Rött"],["vitt","Vitt"],["rose","Rosé"],["mouss","Mousserande"],["ovr","Övrigt"]];
+const catOf=c=>({"Rött":"rott","Vitt":"vitt","Rosé":"rose","Mousserande":"mouss"})[c]||"ovr";
+const PRICES=[["all","Alla priser"],["lo","Under 150"],["mid","150–300"],["hi","Över 300"]];
+const inPrice=(p,k)=>k==="all"||(k==="lo"&&p<150)||(k==="mid"&&p>=150&&p<=300)||(k==="hi"&&p>300);
+const VALUE_RANK={"Fynd":0,"Mer än prisvärt":1,"Prisvärt":2,"":3,"Ej prisvärt":4};
+const BOXLBL={top5:"Femman",best:"Femman",red:"Röda lådan",white:"Vita lådan"};
+let fCat="all", fPrice="all", fSort="price";
+function picksOf(r){
+  const m={};const add=(nr,l)=>{if(!nr)return;(m[nr]=m[nr]||[]).includes(l)||m[nr].push(l)};
+  (r.boxes||[]).forEach(b=>(b.wines||[]).forEach(w=>add(w.artnr,BOXLBL[b.key]||b.key)));
+  const sp=r.specials||{};
+  if(sp.single)add(sp.single.artnr,"Veckans singel");
+  if(sp.red)add(sp.red.artnr,"Veckans röda");
+  if(sp.white)add(sp.white.artnr,"Veckans vita");
+  return m;
+}
+function wrHTML(w,picks){
+  const t=[];
+  if(w.score)t.push(`<span class="tag score">${fmtScore(w.score)} p</span>`);
+  if(w.value==="Fynd")t.push(`<span class="tag fynd">Fynd</span>`);
+  else if(w.value==="Mer än prisvärt"||w.value==="Prisvärt")t.push(`<span class="tag">${w.value}</span>`);
+  else if(w.value==="Ej prisvärt")t.push(`<span class="tag meh">Ej prisvärt</span>`);
+  if(w.bottles&&w.bottles<1000)t.push(`<span class="tag few">Bara ${Number(w.bottles).toLocaleString("sv-SE")} flaskor</span>`);
+  (picks[w.artnr]||[]).forEach(l=>t.push(`<span class="tag inbox">${esc(l)}</span>`));
+  const where=[w.region,w.country].filter((x,i,a)=>x&&a.indexOf(x)===i).join(", ");
+  return `<li class="wr${picks[w.artnr]?" picked":""}">
+    <div><div class="nm">${w.producer&&!w.name.startsWith(w.producer)?`<span class="pr">${esc(w.producer)}</span> `:""}${esc(w.name)}</div>
+    <div class="rg">${esc(where)}${w.cl&&w.cl!==75?` · ${w.cl} cl`:""} · <a href="https://www.systembolaget.se/${encodeURIComponent(w.artnr)}" target="_blank" rel="noopener">nr ${esc(w.artnr)}</a></div></div>
+    <div class="rt"><span class="pc">${kr(w.price)}</span></div>
+    <div class="tags">${t.join("")}</div></li>`;
+}
+function sortWines(ws){
+  const by={price:(a,b)=>a.price-b.price,score:(a,b)=>(b.score||0)-(a.score||0)||a.price-b.price,
+    value:(a,b)=>(VALUE_RANK[a.value]??3)-(VALUE_RANK[b.value]??3)||(b.score||0)-(a.score||0),
+    few:(a,b)=>(a.bottles||1e9)-(b.bottles||1e9)}[fSort];
+  return [...ws].sort(by);
+}
+function renderAll(){
+  const box=$("allwines"), r=all[curDate];
+  const ws=(r&&r.wines)||[];
+  if(!ws.length){box.hidden=true;box.innerHTML="";return}
+  const picks=picksOf(r);
+  const pw=ws.filter(w=>inPrice(w.price,fPrice));
+  const counts={};pw.forEach(w=>{const c=catOf(w.cat);counts[c]=(counts[c]||0)+1});
+  if(fCat!=="all"&&!counts[fCat])fCat="all";
+  const segCat=[["all","Alla",pw.length],...CATS.filter(([k])=>counts[k]).map(([k,l])=>[k,l,counts[k]])]
+    .map(([k,l,n])=>`<button data-cat="${k}" aria-pressed="${fCat===k}">${l}<span class="n">${n}</span></button>`).join("");
+  const segPrice=PRICES.map(([k,l])=>`<button data-price="${k}" aria-pressed="${fPrice===k}">${l}</button>`).join("");
+  const shown=CATS.filter(([k])=>(fCat==="all"||fCat===k)&&counts[k]);
+  const groups=shown.map(([k,l])=>{const g=sortWines(pw.filter(w=>catOf(w.cat)===k));
+    return `<div class="wgroup"><h3><span class="dot ${k}"></span>${l}<span class="n">${g.length} ${g.length===1?"vin":"viner"}</span></h3><ul class="wl">${g.map(w=>wrHTML(w,picks)).join("")}</ul></div>`}).join("");
+  box.innerHTML=`<div class="sechead"><h2>Hela släppet</h2><p>Alla ${ws.length} viner den ${esc(dateLabel(curDate))}. Gröna rader finns i en låda.</p></div>
+    <div class="filters"><div class="seg" role="group" aria-label="Typ">${segCat}</div><div class="seg" role="group" aria-label="Pris">${segPrice}</div>
+    <label class="sortw">Sortera<select id="wsort"><option value="price">Pris</option><option value="score">Betyg</option><option value="value">Prisvärdhet</option><option value="few">Minst upplaga</option></select></label></div>
+    ${groups||`<p class="wempty">Inga viner i den prisklassen.</p>`}`;
+  $("wsort").value=fSort;
+  box.hidden=false;
+}
+$("allwines").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;
+  if(b.dataset.cat){fCat=b.dataset.cat;renderAll()} else if(b.dataset.price){fPrice=b.dataset.price;renderAll()}});
+$("allwines").addEventListener("change",e=>{if(e.target.id==="wsort"){fSort=e.target.value;renderAll()}});
 
 /* andra släpp utanför Systembolaget */
 let extra={sellers:{},drops:[]};
