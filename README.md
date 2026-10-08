@@ -1,4 +1,4 @@
-# Vinofino
+# Winewine
 
 Veckans vinlådor ur Systembolagets tillfälliga sortiment. Statisk sida som publiceras med GitHub Pages.
 
