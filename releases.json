@@ -1,0 +1,515 @@
+{
+ "2026-10-02": {
+  "boxes": [
+   {
+    "intro": "Ett vin under 200 kr, ett fredagsvin, en Rhône-klassiker, en okänd fransk druva och en Riesling att glömma i källaren.",
+    "key": "top5",
+    "title": "Från fynd till källare",
+    "total": 1101,
+    "wines": [
+     {
+      "artnr": "9404401",
+      "bottles": 1800,
+      "desc": "Margaret River i västra Australien har ett svalt havsklimat som ger Chardonnay med friskhet snarare än tyngd. Det här är släppets bästa vin under 200 kr: mineralrikt med citrustoner, bra balans mellan frukt och mineral och en lång, elegant avslutning. Det smakar mer än priset antyder. Servera vid 10–12 grader och drick under de närmaste två åren.",
+      "food": "Grillad fisk, kyckling eller räkor",
+      "name": "Wayfinder Chardonnay 2025",
+      "price": 199,
+      "region": "Margaret River, Australien",
+      "role": "hundring",
+      "score": 14.5,
+      "type": "Vitt",
+      "value": "Mer än prisvärt"
+     },
+     {
+      "artnr": "9508301",
+      "bottles": 24000,
+      "desc": "Garnacha från gamla stockar i bergen väster om Madrid, ett område som gått från okänt till hyllat de senaste åren. Vinet är saftigt med mörka plommon, björnbär och körsbär, en touch blommor och ett varmt, sötfruktigt slut. Munskänkarna kallar det ett fynd i sin prisklass. Drick det nu, gärna lite svalare än rumstemperatur, runt 16 grader.",
+      "food": "Tapas, grillat eller chili",
+      "name": "Zestos Old Vine Garnacha 2025",
+      "price": 135,
+      "region": "Vinos de Madrid, Spanien",
+      "role": "fredag",
+      "score": 13.5,
+      "type": "Rött",
+      "value": "Fynd"
+     },
+     {
+      "artnr": "9501701",
+      "bottles": 7200,
+      "desc": "Crozes-Hermitage är norra Rhônes största appellation och en av de bästa platserna att lära sig hur Syrah ska smaka. Yann Chave är en av områdets mest respekterade odlare och arbetar ekologiskt. Räkna med chark, björnbärsmarmelad, svarta oliver, örter och svartpeppar, med tuggiga tanniner och ett nyanserat slut. Gott nu efter en timmes luftning, och håller gärna 5–8 år.",
+      "food": "Lammstek, grillat eller vilt",
+      "name": "Yann Chave Crozes-Hermitage 2024",
+      "price": 259,
+      "region": "Rhône, Frankrike",
+      "role": "klassiker",
+      "score": 15,
+      "type": "Rött",
+      "value": "Mer än prisvärt"
+     },
+     {
+      "artnr": "9529901",
+      "bottles": 1200,
+      "desc": "Saint-Pourçain i centrala Frankrike är ett av landets äldsta men mest bortglömda vinområden. Här blandas Chardonnay med den lokala druvan Tressallier, som nästan inte odlas någon annanstans. Vinet doftar gult äpple, apelsin, päron och mandelmassa och smakar syrligt och mineraliskt med ett stenigt slut. Ekologiskt, och ett vin du sannolikt aldrig provat förut.",
+      "food": "Kyckling, quiche eller fisk",
+      "name": "Les Terres d'Ocre Saint-Pourçain Les Gravoches 2024",
+      "price": 229,
+      "region": "Saint-Pourçain, Frankrike",
+      "role": "upptackt",
+      "score": 14.5,
+      "type": "Vitt",
+      "value": "Mer än prisvärt"
+     },
+     {
+      "artnr": "9406701",
+      "bottles": 636,
+      "desc": "Dönnhoff räknas till Tysklands absolut främsta Riesling-producenter, och det här är en torr Riesling i rak stil. Redan nu finns vit persika, citron, blommor och tydlig mineral med en lång, fruktig avslutning. Riesling är en av världens bästa vita lagringsdruvor: om 5–15 år kommer honung, torkad frukt och petroleumtoner. Köp gärna två, en att dricka nu och en att glömma.",
+      "food": "Asiatiskt, fisk eller skaldjur",
+      "name": "Dönnhoff Westhofener Riesling Trocken 2024",
+      "price": 279,
+      "region": "Nahe, Tyskland",
+      "role": "lagring",
+      "score": 15,
+      "type": "Vitt",
+      "value": "Mer än prisvärt"
+     }
+    ]
+   },
+   {
+    "intro": "Fem röda från norr till söder: Nebbiolo i två skepnader, Barbera, Sangiovese och den kraftfulla Sagrantino.",
+    "key": "red",
+    "title": "Italien från Alperna till Umbrien",
+    "total": 1035,
+    "wines": [
+     {
+      "artnr": "9513701",
+      "bottles": 6000,
+      "desc": "Valtellina ligger vid den schweiziska gränsen, där Nebbiolo odlas på branta terrasser i alperna och kallas Chiavennasca. Nino Negri är områdets stora namn. Vinet är lättare än Piemontes Nebbiolo, med jord, anis, lavendel, körsbär och blodapelsin och sammetslena tanniner. Börja lådan här och servera vid 15–16 grader.",
+      "food": "Pizzoccheri, ost eller chark",
+      "name": "Nino Negri Giùen Rosso di Valtellina Nebbiolo 2024",
+      "price": 169,
+      "region": "Valtellina, Lombardiet, Italien",
+      "score": 14,
+      "type": "Rött",
+      "value": "Mer än prisvärt"
+     },
+     {
+      "artnr": "9415901",
+      "bottles": 4200,
+      "desc": "Luigi Oddero är en traditionell Barolo-producent, och Langhe Nebbiolo är husets lillebror till Barolon. Doften har hallon, blodapelsin, röda rosor och jord, och smaken är rödbärig och lätt örtig med finkorniga tanniner. Jämför med Valtellina-vinet för att se samma druva på två olika platser. Drick nu eller inom fem år.",
+      "food": "Tryffelpasta, kalv eller svamp",
+      "name": "Luigi Oddero Langhe Nebbiolo 2024",
+      "price": 219,
+      "region": "Piemonte, Italien",
+      "score": 14,
+      "type": "Rött",
+      "value": "Prisvärt"
+     },
+     {
+      "artnr": "9442201",
+      "bottles": 6600,
+      "desc": "Barbera är Piemontes vardagsdruva, känd för hög syra och mjuka tanniner, och Mauro Veglio är en välrenommerad gård i La Morra. Här finns mörka körsbär, björnbär, plommon, torkade örter och lakrits med ett syrligt, fast slut. Syran gör vinet till ett av de mest matvänliga i lådan. Drick det de närmaste tre åren.",
+      "food": "Lasagne, pizza eller köttbullar",
+      "name": "Mauro Veglio Barbera d'Alba 2024",
+      "price": 209,
+      "region": "Piemonte, Italien",
+      "score": 14,
+      "type": "Rött",
+      "value": "Mer än prisvärt"
+     },
+     {
+      "artnr": "9325001",
+      "bottles": 6000,
+      "desc": "Fèlsina är en av Chianti Classicos mest respekterade gårdar, och Pagliarese är ett vingårdsvin från deras sortiment. Munskänkarna utsåg det till fynd i sin prisklass. Räkna med salvia, ceder, mörka körsbär, katrinplommon och lite tomatsås, med frisk syra och ett nyanserat, örtigt slut. Klassisk Sangiovese som är bäst till mat.",
+      "food": "Pasta med ragù, bistecca eller grillad kyckling",
+      "name": "Fèlsina Pagliarese Chianti Classico 2023",
+      "price": 209,
+      "region": "Toscana, Italien",
+      "score": 15,
+      "type": "Rött",
+      "value": "Fynd"
+     },
+     {
+      "artnr": "9001401",
+      "bottles": 4600,
+      "desc": "Sagrantino från Montefalco i Umbrien räknas som en av världens mest tanninrika druvor, och Antonelli är en av pionjärerna. Vinet har fått några år på nacken och visar jord, mörka bär, korinter och lite murket trä, med tuggiga tanniner och ett jordigt slut. Dekantera minst en timme, eller lägg undan några år. Ekologiskt.",
+      "food": "Lammgryta, vildsvin eller lagrad ost",
+      "name": "Antonelli Montefalco Sagrantino 2020",
+      "price": 229,
+      "region": "Umbrien, Italien",
+      "score": 14,
+      "type": "Rött",
+      "value": "Prisvärt"
+     }
+    ]
+   },
+   {
+    "intro": "Sauvignon från Loire, Grüner från Wachau, en italiensk blend och sydafrikansk Chardonnay, från friskt till fylligt.",
+    "key": "white",
+    "title": "Fyra länder, fyra stilar",
+    "total": 1048,
+    "wines": [
+     {
+      "artnr": "9503501",
+      "bottles": 3600,
+      "desc": "Sancerre i östra Loire är Sauvignon Blancs franska hemland, med kalk- och flintjordar som ger stramhet och mineral. Familjen Reverdy-Ducroux har odlat här i generationer. Doften har grapefrukt, citron, nektarin, äppelblom och kaprifol, och smaken är citrusfrisk med ett avrundat, fruktigt slut. Servera kallt, runt 9–10 grader.",
+      "food": "Getost, sparris eller fisk",
+      "name": "Reverdy-Ducroux Sancerre Beau Roy 2024",
+      "price": 251,
+      "region": "Loire, Frankrike",
+      "score": 15,
+      "type": "Vitt",
+      "value": "Mer än prisvärt"
+     },
+     {
+      "artnr": "9016301",
+      "bottles": 4200,
+      "desc": "Jamek var en av pionjärerna för torra viner i Wachau, Österrikes mest kända vinområde vid Donau. Federspiel är Wachaus mellannivå, med lite mer kropp än de lättaste vinerna. Grüner Veltliner bjuder på gröna päron, äpplen och den typiska vitpepparn, och slutet är syrligt och pepprigt. Ett ovanligt matvänligt vitt.",
+      "food": "Wienerschnitzel, sallader eller sushi",
+      "name": "Josef Jamek Stein am Rain Grüner Veltliner Federspiel 2025",
+      "price": 199,
+      "region": "Wachau, Österrike",
+      "score": 14,
+      "type": "Vitt",
+      "value": "Mer än prisvärt"
+     },
+     {
+      "artnr": "9378101",
+      "bottles": 900,
+      "desc": "Custoza ligger vid Gardasjön strax intill Soave och blandar flera lokala druvor, främst Garganega. Sexaginta är en ambitiösare version som fått några år på sig, och det märks i en rikare stil med gul frukt, lite fat och buljong. Slutet har ett fint mineralbett. Bara 900 flaskor finns.",
+      "food": "Risotto, vitello tonnato eller vit fisk",
+      "name": "Monte del Frà Sexaginta Custoza Superiore 2021",
+      "price": 249,
+      "region": "Veneto, Italien",
+      "score": 15,
+      "type": "Vitt",
+      "value": "Mer än prisvärt"
+     },
+     {
+      "artnr": "9457201",
+      "bottles": 1200,
+      "desc": "Crystallum drivs av Peter-Allan Finlayson och är ett av Sydafrikas mest hyllade namn för Chardonnay och Pinot Noir från svala lägen nära havet. The Agnes har en touch brynt smör och rök, äpple och plommon, och smaken är kryddig och fräsch med bra bett. Lådans fylligaste vin, så drick det sist. Servera vid 11–12 grader.",
+      "food": "Kyckling, hälleflundra eller svampgratäng",
+      "name": "Crystallum The Agnes Chardonnay 2025",
+      "price": 349,
+      "region": "Hemel-en-Aarde, Sydafrika",
+      "score": 15.5,
+      "type": "Vitt",
+      "value": "Mer än prisvärt"
+     }
+    ]
+   }
+  ],
+  "monthBest": false,
+  "releaseDate": "2026-10-02",
+  "source": "Munskänkarnas provning av tillfälligt sortiment 2 oktober 2026",
+  "specials": {
+   "red": {
+    "artnr": "9420101",
+    "bottles": 300,
+    "desc": "Släppets högst rankade vin med 17 poäng, från Jadots egen monopolvingård i Beaune. Röda bär och lätt krydda med rund, harmonisk smak och mjuka tanniner. Gott redan om ett par år, bäst om 5–10. Bara 300 flaskor.",
+    "name": "Louis Jadot Beaune 1er Cru Clos des Couchereaux 2024",
+    "price": 539,
+    "region": "Bourgogne, Frankrike",
+    "score": 17,
+    "value": "Mer än prisvärt"
+   },
+   "single": {
+    "artnr": "9325001",
+    "bottles": 6000,
+    "desc": "Släppets fynd i sin prisklass från en av Chianti Classicos bästa gårdar. Salvia, ceder och mörka körsbär med frisk syra som gör det till ett perfekt matvin. Öppna en halvtimme innan och servera till helgens pasta eller grillat. Finns i 6000 flaskor, så chansen är god att den finns kvar.",
+    "name": "Fèlsina Pagliarese Chianti Classico 2023",
+    "price": 209,
+    "region": "Toscana, Italien",
+    "score": 15,
+    "type": "Rött",
+    "value": "Fynd"
+   },
+   "white": {
+    "artnr": "9131201",
+    "bottles": 3600,
+    "desc": "Släppets bästa vita med 16 poäng, från gamla stockar i södra Bourgogne. Fat, mineral, äpple och citrus i en generös men läskande stil med långt örtkryddigt slut. Ekologiskt. Drick nu eller inom sex år.",
+    "name": "Domaine Cordier Pouilly-Fuissé Vieilles Vignes 2025",
+    "price": 400,
+    "region": "Bourgogne, Frankrike",
+    "score": 16,
+    "value": "Mer än prisvärt"
+   }
+  }
+ },
+ "2026-10-09": {
+  "boxes": [
+   {
+    "intro": "Fyra av fem från Italien: ett vitt fynd från Kalabrien, Toscana-klassikern, en okänd Piemonte-druva och en Barolo för källaren.",
+    "key": "top5",
+    "title": "Italienska veckan",
+    "total": 1206,
+    "wines": [
+     {
+      "artnr": "9416301",
+      "bottles": 4200,
+      "desc": "Cirò på Italiens tå är mest känt för röda viner, men det vita på druvan Greco Bianco är en riktig överraskning. Doften har gult äpple, äppelblom, päron och kritig mineral, och smaken är blommig med fin balans mellan frukt och mineral. Munskänkarna kallar det mer än prisvärt. Ekologiskt, och perfekt kylt till vardagsmat.",
+      "food": "Fisk, grönsaker eller antipasti",
+      "name": "Scala Cirò Bianco 2025",
+      "price": 159,
+      "region": "Kalabrien, Italien",
+      "role": "hundring",
+      "score": 13,
+      "type": "Vitt",
+      "value": "Mer än prisvärt"
+     },
+     {
+      "artnr": "9602801",
+      "bottles": 16200,
+      "desc": "Terra Alta i södra Katalonien är Garnacha Blancas hemmaplan, och Raig de Raïm är en återkommande favorit i tillfälligt sortiment. Vinet är okomplicerat och fruktigt med tropisk frukt, mango, citron och örter. Det finns i över 16 000 flaskor, så det är lätt att få tag på. Ekologiskt och gjort för att drickas nu.",
+      "food": "Tapas, kyckling eller skaldjur",
+      "name": "Celler Piñol Raig de Raïm Blanco 2025",
+      "price": 120,
+      "region": "Terra Alta, Katalonien, Spanien",
+      "role": "fredag",
+      "score": 12,
+      "type": "Vitt",
+      "value": "Mer än prisvärt"
+     },
+     {
+      "artnr": "9263101",
+      "bottles": 7800,
+      "desc": "Montepulciano är en av Toscanas tre stora Sangiovese-orter, och Poliziano är dess ledande producent. Munskänkarna utsåg vinet till fynd i sin prisklass med 16 poäng. Räkna med blyerts, körsbär, plommon, salvia, te och jord, med strama tanniner och ett komplext slut. Gott nu med luftning och håller i 8–10 år.",
+      "food": "Höstgryta, ragù eller vilt",
+      "name": "Poliziano Vino Nobile di Montepulciano 2023",
+      "price": 269,
+      "region": "Toscana, Italien",
+      "role": "klassiker",
+      "score": 16,
+      "type": "Rött",
+      "value": "Fynd"
+     },
+     {
+      "artnr": "9416101",
+      "bottles": 1200,
+      "desc": "Pelaverga Piccolo odlas nästan bara runt byn Verduno i Barolo-området och var nära att försvinna helt. Castello di Verduno har varit med och räddat druvan. Vinet är kryddigt med lagerblad, kryddnejlika och röda körsbär, lätt och syrligt med ett blommigt slut. Servera lätt kylt, runt 14 grader.",
+      "food": "Kyckling, svamppasta eller charkbricka",
+      "name": "Castello di Verduno Basadone Pelaverga 2024",
+      "price": 259,
+      "region": "Piemonte, Italien",
+      "role": "upptackt",
+      "score": 14.5,
+      "type": "Rött",
+      "value": "Prisvärt"
+     },
+     {
+      "artnr": "9414901",
+      "bottles": 1200,
+      "desc": "Barolo är Nebbiolo i sin mest seriösa form, och under 400 kr är ovanligt billigt för den här kvaliteten (16 poäng). Doften har hallon, blodapelsin, maraschinokörsbär, syren och sötlakrits, och smaken är koncentrerad och kryddig med balanserade tanniner. Det går att dricka nu efter ett par timmar i karaff, men det blir mycket bättre om 5–10 år.",
+      "food": "Vilt, långkok eller svamp",
+      "name": "Castello di Verduno Barolo 2022",
+      "price": 399,
+      "region": "Piemonte, Italien",
+      "role": "lagring",
+      "score": 16,
+      "type": "Rött",
+      "value": "Mer än prisvärt"
+     }
+    ]
+   },
+   {
+    "intro": "Samma druva från Bourgogne, Kalifornien och Australien, plus släktingen Gamay som bonus.",
+    "key": "red",
+    "title": "Pinot Noir jorden runt",
+    "total": 1126,
+    "wines": [
+     {
+      "artnr": "9270501",
+      "bottles": 480,
+      "desc": "Faiveley är ett av Bourgognes stora hus, och La Framboisière är en vingård i Mercurey som de äger helt själva. Det här är referenspunkten för lådan. Doften är rökig med mörka röda bär och jordgubbar, och smaken har varm frukt, mjuka tanniner och lång eftersmak. Servera vid 15–16 grader.",
+      "food": "Anka, kalv eller svamp",
+      "name": "Faiveley Mercurey La Framboisière Monopole 2024",
+      "price": 399,
+      "region": "Bourgogne, Frankrike",
+      "score": 16,
+      "type": "Rött",
+      "value": "Mer än prisvärt"
+     },
+     {
+      "artnr": "9222601",
+      "bottles": 13800,
+      "desc": "Au Bon Climat grundades av legendariske Jim Clendenen, som gjorde Pinot Noir i en burgundisk stil när resten av Kalifornien gick mot kraft. Vinet har återkommit i tillfälligt sortiment i över tio år. Räkna med hallon, solmogna jordgubbar, blodapelsin och lakrits, med inslag av eneträ och jord. Mer frukt än Bourgogne men fortfarande elegant.",
+      "food": "Lax, kyckling eller grillat",
+      "name": "Au Bon Climat Santa Barbara County Pinot Noir 2024",
+      "price": 289,
+      "region": "Kalifornien, USA",
+      "score": 15,
+      "type": "Rött",
+      "value": "Mer än prisvärt"
+     },
+     {
+      "artnr": "9437801",
+      "bottles": 624,
+      "desc": "Yarra Valley utanför Melbourne är Australiens svalaste klassiska Pinot-område, och Willowlake ligger i de svalare övre delarna av dalen. Vinet är lätt och nyanserat med lingon, röda vinbär, hallon, ljung och stenig mineral. Det visar att Australien kan mycket mer än kraftig Shiraz. Lådans lättaste Pinot.",
+      "food": "Fågel, rödbetor eller lättare kött",
+      "name": "Oakridge Willowlake Vineyard Pinot Noir 2024",
+      "price": 259,
+      "region": "Yarra Valley, Australien",
+      "score": 15,
+      "type": "Rött",
+      "value": "Mer än prisvärt"
+     },
+     {
+      "artnr": "9418101",
+      "bottles": 1800,
+      "desc": "Gamay är druvan bakom Beaujolais och nära släkt med Pinot Noir. Här kommer den från Sydafrika, vilket är ovanligt. Svarta vinbär, blåbär, korinter och jord med frisk syra och fina tanniner. Servera svalt, runt 14 grader, som lådans bonus och vardagsvin.",
+      "food": "Pizza, korv eller vardagsmat",
+      "name": "Radford Dale Vinum Gamay Noir 2025",
+      "price": 179,
+      "region": "Stellenbosch, Sydafrika",
+      "score": 13.5,
+      "type": "Rött",
+      "value": "Mer än prisvärt"
+     }
+    ]
+   },
+   {
+    "intro": "Samma druva från Europa, Australien och Nordamerika. Prova i ordning från stramt till fylligt: Chablis, Yarra Valley och sist Oregon.",
+    "key": "white",
+    "title": "Chardonnay på tre kontinenter",
+    "total": 1029,
+    "wines": [
+     {
+      "artnr": "9003801",
+      "bottles": 1200,
+      "desc": "Chablis är Chardonnay utan fat och smink, och Côte de Lechet är ett premier cru-läge på västra sidan av Serein-dalen med mycket kalksten. Familjen Defaix arbetar ekologiskt. Doften har gröna äpplen, citrus, vita blommor och kalkig mineral, och smaken är stram med en lång, salt eftersmak. Börja lådan här, vid 10 grader.",
+      "food": "Ostron, skaldjur eller fisk",
+      "name": "Bernard Defaix Chablis Côte de Lechet 1er Cru 2024",
+      "price": 361,
+      "region": "Bourgogne, Frankrike",
+      "score": 16,
+      "type": "Vitt",
+      "value": "Mer än prisvärt"
+     },
+     {
+      "artnr": "9439301",
+      "bottles": 624,
+      "desc": "Oakridge är en av Yarra Valleys ledande producenter, och svala Willowlake ger Chardonnay i den moderna australiska stilen: mer återhållsam och mineralisk än förr. Doften är rökig med gula äpplen, tropisk frukt och mineral. Smaken är generös men har syra och beska som håller ihop den. Mittpunkten i lådan, mellan stramt och fylligt.",
+      "food": "Grillad fisk, fläsk eller svamp",
+      "name": "Oakridge Willowlake Chardonnay 2024",
+      "price": 269,
+      "region": "Yarra Valley, Australien",
+      "score": 15.5,
+      "type": "Vitt",
+      "value": "Mer än prisvärt"
+     },
+     {
+      "artnr": "9411001",
+      "bottles": 360,
+      "desc": "Cristom är mest känd för Pinot Noir från Oregons Willamette Valley, men deras Chardonnay har blivit allt mer hyllad. Eola-Amity Hills får kalla vindar från Stilla havet, vilket ger friskhet trots fatlagringen. Räkna med persika och citrus, lite smör och fat, och en balanserad längd med fin beska. Lådans fylligaste, drick det sist vid 12 grader.",
+      "food": "Hummer eller kyckling i gräddsås",
+      "name": "Cristom Eola-Amity Hills Chardonnay 2023",
+      "price": 399,
+      "region": "Oregon, USA",
+      "score": 16,
+      "type": "Vitt",
+      "value": "Mer än prisvärt"
+     }
+    ]
+   }
+  ],
+  "monthBest": true,
+  "releaseDate": "2026-10-09",
+  "source": "Munskänkarnas provning av tillfälligt sortiment 9 oktober 2026",
+  "specials": {
+   "red": {
+    "artnr": "9008401",
+    "bottles": 720,
+    "desc": "Lillebror till Pingus, ett av Spaniens dyraste kultviner, och släppets högst rankade med 18 poäng. Plommon, björnbär, örter och fat i en koncentrerad och komplex stil med sandiga tanniner. Bara 720 flaskor, så beställ direkt klockan 10. Lagra 5–15 år eller dekantera länge.",
+    "name": "Flor de Pingus 2023",
+    "price": 1199,
+    "region": "Ribera del Duero, Spanien",
+    "score": 18,
+    "value": ""
+   },
+   "single": {
+    "artnr": "9263101",
+    "bottles": 7800,
+    "desc": "Munskänkarnas fynd i sin prisklass med 16 poäng, i 7800 flaskor. Körsbär, plommon, salvia och jord med komplex längd. Ge det en timme i karaff och servera till en höstgryta eller ragù i helgen. Det är också veckans klassiker i femman.",
+    "name": "Poliziano Vino Nobile di Montepulciano 2023",
+    "price": 269,
+    "region": "Toscana, Italien",
+    "score": 16,
+    "type": "Rött",
+    "value": "Fynd"
+   },
+   "white": {
+    "artnr": "9036201",
+    "bottles": 1200,
+    "desc": "Pouilly-Fuissé fick sina första premier cru-lägen 2020, och La Frérie är ett av dem. Gula frukter, grillad citron och gula plommon med mineral. Rund och generös med lång, kryddig och syrlig avslutning. Drick inom fem år.",
+    "name": "Auvigue Pouilly-Fuissé 1er Cru La Frérie 2022",
+    "price": 489,
+    "region": "Bourgogne, Frankrike",
+    "score": 16,
+    "value": "Prisvärt"
+   }
+  }
+ },
+ "2026-10-16": {
+  "highlights": [
+   {
+    "name": "Penfolds Bin 389 2024",
+    "note": "Klassisk blend av Cabernet Sauvignon och Shiraz som fått fina förhandsomdömen. Kandidat till röd specialflaska.",
+    "price": 599,
+    "region": "South Australia",
+    "type": "Rött"
+   },
+   {
+    "name": "Faiveley Gevrey-Chambertin Vieilles Vignes 2024",
+    "note": "Bara cirka 150 flaskor.",
+    "price": 659,
+    "region": "Bourgogne, Frankrike",
+    "type": "Rött"
+   },
+   {
+    "name": "Bodega Son Antem Vespre 2024",
+    "note": "Strukturerat men elegant med jordgubbar och röda plommon.",
+    "price": 299,
+    "region": "Mallorca, Spanien",
+    "type": "Rött"
+   },
+   {
+    "name": "Penfolds Reserve Bin A Chardonnay 2025",
+    "note": "Fatad Chardonnay i liten upplaga. Kandidat till vit specialflaska.",
+    "price": 559,
+    "region": "Adelaide Hills, Australien",
+    "type": "Vitt"
+   },
+   {
+    "name": "Juliusspital Würzburger Stein Silvaner Erste Lage 2025",
+    "note": "Ung och frisk Silvaner, en ovanlig druva till bra pris.",
+    "price": 209,
+    "region": "Franken, Tyskland",
+    "type": "Vitt"
+   }
+  ],
+  "monthBest": false,
+  "releaseDate": "2026-10-16",
+  "source": "förhandsprovningar av Hans Artberg, Vinbanken och importörers släpplistor"
+ },
+ "2026-10-23": {
+  "highlights": [
+   {
+    "name": "Carlo Revello & Figli Barolo Giachini 2022",
+    "note": "Stram och kryddig Nebbiolo från ett enskilt cru, med lagringspotential.",
+    "price": 459,
+    "region": "Piemonte, Italien",
+    "type": "Rött"
+   },
+   {
+    "name": "Ménard-Gaborit Clos Cormerais 2024",
+    "note": "Muscadet från ett enskilt clos, klassiskt till skaldjur.",
+    "price": 259,
+    "region": "Muscadet, Loire, Frankrike",
+    "type": "Vitt"
+   }
+  ],
+  "monthBest": false,
+  "releaseDate": "2026-10-23",
+  "source": "förhandsprovningar av Hans Artberg och importörers släpplistor"
+ }
+}
