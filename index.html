@@ -430,7 +430,7 @@ function wrHTML(w,picks){
   (picks[w.artnr]||[]).forEach(l=>t.push(`<span class="tag inbox">${esc(l)}</span>`));
   const where=[w.region,w.country].filter((x,i,a)=>x&&a.indexOf(x)===i).join(", ");
   return `<li class="wr${picks[w.artnr]?" picked":""}">
-    <div><div class="nm">${w.producer&&!w.name.startsWith(w.producer)?`<span class="pr">${esc(w.producer)}</span> `:""}${esc(w.name)}</div>
+    <div><div class="nm">${w.producer&&!w.name.includes(w.producer.split(" ").pop())?`<span class="pr">${esc(w.producer)}</span> `:""}${esc(w.name)}</div>
     <div class="rg">${esc(where)}${w.cl&&w.cl!==75?` · ${w.cl} cl`:""} · <a href="https://www.systembolaget.se/${encodeURIComponent(w.artnr)}" target="_blank" rel="noopener">nr ${esc(w.artnr)}</a></div></div>
     <div class="rt"><span class="pc">${kr(w.price)}</span></div>
     <div class="tags">${t.join("")}</div></li>`;
