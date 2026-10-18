@@ -12,12 +12,33 @@
    "seller": "Caviste",
    "name": "CAV0217",
    "launch": "2026-10-15T14:00",
-   "url": "https://www.caviste.se/cav/",
-   "intro": "Nästa låda från Caviste. Odlare och viner presenteras först när lådan släpps.",
-   "boxPrice": null,
-   "bottles": null,
-   "soldOut": false,
-   "wines": []
+   "url": "https://www.caviste.se/cav/cav0217-ferdinando-principiano/",
+   "intro": "Sex flaskor från Ferdinando Principiano i Monforte d'Alba: Barbera, Langhe Nebbiolo och Barolo från Serralunga, två av varje. Leverans vecka 44–45.",
+   "producer": "Ferdinando Principiano",
+   "region": "Piemonte, Italien",
+   "boxPrice": 1490,
+   "bottles": 6,
+   "soldOut": true,
+   "wines": [
+    {
+     "name": "Ferdinando Principiano Barbera d'Alba 2024",
+     "region": "Barbera d'Alba, Piemonte",
+     "qty": 2,
+     "price": 185
+    },
+    {
+     "name": "Ferdinando Principiano Langhe Nebbiolo 2024",
+     "region": "Langhe, Piemonte",
+     "qty": 2,
+     "price": 215
+    },
+    {
+     "name": "Ferdinando Principiano Barolo del Comune di Serralunga d'Alba 2022",
+     "region": "Barolo, Piemonte",
+     "qty": 2,
+     "price": 345
+    }
+   ]
   }
  ]
 }
