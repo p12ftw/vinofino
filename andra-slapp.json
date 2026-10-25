@@ -39,6 +39,14 @@
      "price": 345
     }
    ]
+  },
+  {
+   "id": "cav0218",
+   "seller": "Caviste",
+   "name": "CAV0218",
+   "launch": "2026-11-05T14:00",
+   "url": "https://www.caviste.se/cav/",
+   "intro": "Nästa låda från Caviste. Odlare och viner presenteras först när lådan släpps."
   }
  ]
 }
