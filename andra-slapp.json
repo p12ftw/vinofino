@@ -45,7 +45,46 @@
    "seller": "Caviste",
    "name": "CAV0218",
    "launch": "2026-11-05T14:00",
-   "url": "https://www.caviste.se/cav0218/",
+   "url": "https://www.caviste.se/cav/cav0218-le-grappin/",
+   "intro": "Sex flaskor från Le Grappin (Andrew Nielsen) i Bourgogne: Bourgogne Hautes-Côtes de Beaune i vitt och rött plus två Beaune Premier Cru. Leverans vecka 47–48.",
+   "producer": "Le Grappin",
+   "region": "Bourgogne, Frankrike",
+   "boxPrice": 2690,
+   "bottles": 6,
+   "soldOut": false,
+   "wines": [
+    {
+     "name": "Le Grappin Bourgogne Hautes-Côtes de Beaune Blanc 2024",
+     "region": "Hautes-Côtes de Beaune, Bourgogne",
+     "qty": 2,
+     "price": 325
+    },
+    {
+     "name": "Le Grappin Beaune Premier Cru Les Grèves Blanc 2024",
+     "region": "Beaune 1er Cru, Bourgogne",
+     "qty": 1,
+     "price": 585
+    },
+    {
+     "name": "Le Grappin Bourgogne Hautes-Côtes de Beaune Rouge Aux Grandes Raies 2024",
+     "region": "Hautes-Côtes de Beaune, Bourgogne",
+     "qty": 1,
+     "price": 325
+    },
+    {
+     "name": "Le Grappin Beaune Premier Cru Boucherottes Rouge 2024",
+     "region": "Beaune 1er Cru, Bourgogne",
+     "qty": 2,
+     "price": 565
+    }
+   ]
+  },
+  {
+   "id": "cav0219",
+   "seller": "Caviste",
+   "name": "CAV0219",
+   "launch": "2026-11-19T14:00",
+   "url": "https://www.caviste.se/cav/",
    "intro": "Nästa låda från Caviste. Odlare och viner presenteras först när lådan släpps."
   }
  ]
